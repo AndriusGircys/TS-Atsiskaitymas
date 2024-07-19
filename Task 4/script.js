@@ -6,15 +6,13 @@ Pvz.:
   "kebabas" --> 1010101
   "a"       --> 1
 -------------------------------------------------------------------------- */
-function tekstasIKodas(tekstas: string): number {
-  // Sukuriame masyvą su vienetais ir nuliais pagal tekstą
-  const kodas = Array.from(tekstas).map((_, index) => (index % 2 === 0 ? 1 : 0)).join('');
-  
-  // Grąžiname skaičių
-  return parseInt(kodas, 2);
+function tekstasIKodas(tekstas) {
+    // Sukuriame masyvą su vienetais ir nuliais pagal tekstą
+    var kodas = Array.from(tekstas).map(function (_, index) { return (index % 2 === 0 ? 1 : 0); }).join('');
+    // Grąžiname skaičių
+    return parseInt(kodas, 2);
 }
-
 // Pavyzdžiai
-console.log(tekstasIKodas("labas"));  // 10101
+console.log(tekstasIKodas("labas")); // 10101
 console.log(tekstasIKodas("kebabas")); // 1010101
 console.log(tekstasIKodas("a"));
